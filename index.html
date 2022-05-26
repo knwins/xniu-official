@@ -283,9 +283,19 @@
 
 
 		//------------------------Main3-----------------------------
-		var symbolOvalArray=result.analyseOvals;
-		var inCoinSum=100000;
+		var symbolOval=new Array();
+		var inCoinSum=0;
  
+		  //数据处理
+ 	  result.analyseICoinOvals.forEach((item,index)=>{
+			var oval = new Object();
+			oval.name="${item.name}";
+			oval.value=${item.percent};
+			inCoinSum=${item.sumIncome};
+			symbolOval.push(oval); 
+ 		});
+
+
     // 基于准备好的dom，初始化echarts实例
     var mainChart3 = echarts.init(document.getElementById('mainChart3'));
     option = {
