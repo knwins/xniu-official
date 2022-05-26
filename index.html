@@ -61,7 +61,7 @@
 		<section class="feature" id="feature">
 			<div class="feature-inner">
 				<p class="title">快牛量化 FASTBULL</p>
-				<p class="subtitle">为用户累计获利-2739.322U，提供安全、可信赖的数字资产量化交易服务商</p>
+				<p class="subtitle">为用户提供安全、可信赖的数字资产量化交易服务商</p>
 				<div class="feature-cards">
 					<div class="ant-card feature-item ant-card-bordered">
 						<div class="ant-card-body">
@@ -77,8 +77,8 @@
 					</div>
 					<div class="ant-card feature-item ant-card-bordered">
 						<div class="ant-card-body">
-							<p class="title" id="coinSum">150</p>
-							<p class="subtitle">量化币种数量</p>
+							<p class="title" id="yesterdayIncome">150</p>
+							<p class="subtitle">昨天收益</p>
 						</div>
 					</div>
 				</div>
@@ -93,7 +93,7 @@
 					<div>
 						<p class="title">多种智能策略选择</p>
 						<p class="subtitle">支持 BTC, ETH, EOS, XRP, BCH, TRX, LTC, FIL,
-							BNB, HT等币种</p>
+							BNB等币种</p>
 
 						<p class="number">智能稳定型</p>
 						<div class="flex-row">
@@ -110,10 +110,10 @@
 						</div>
 
 						</br>
-						<p class="number">稳定波段型</p>
+						<p class="number">长期投资型</p>
 						<div class="flex-row">
 							<div>
-								<p class="desc">适用于不分币价高低，根据币种情行扑捉上下浮动波段低买高卖实现盈利。</p>
+								<p class="desc">适用于长期优质币种。</p>
 							</div>
 						</div>
 					</div>
@@ -121,18 +121,18 @@
 				<div class="flex-row product-tokenlon">
 					<div>
 						<p class="title">交易所支持</p>
-						<p class="subtitle">支持现货火币、币安交易所交易</p>
-						<p class="number">火币全球站</p>
+						<p class="subtitle">支持现货币安、FTX交易所交易</p>
+						<p class="number">币安全球站</p>
 						<div class="flex-row">
 							<div>
 								<p class="desc">为全球数千万用户提供安全、可信赖的数字资产交易平台</p>
 							</div>
 						</div>
 						 
-						<p class="number">币安全球站</p>
+						<p class="number">FTX全球站</p>
 						<div class="flex-row">
 							<div>
-								<p class="desc">全球最大的虚拟货币数字资产交易所服务平台</p>
+								<p class="desc">全球最大的虚拟货币数字资产交易所服务平台,手续费更低</p>
 							</div>
 						</div>
 					</div>
@@ -210,6 +210,11 @@
 
      //持仓金额
      $("#holdAmountSum").html(result.holdAmountSum);
+
+
+ 　　//昨日收益
+     $("#yesterdayIncome").html(result.yesterdayIncome);
+     
 
 		//----------------------交易额成获利曲线图数据 Main1---------------------------
 		var inComeArray=result.analyseChartDataOne.datas;
