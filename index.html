@@ -221,65 +221,69 @@
 		//时间
 		var timeArray=result.analyseChartDataOne.times;
 
+
+
+		 
+		  // 基于准备好的dom，初始化echarts实例
+		  var mainChart1 = echarts.init(document.getElementById('mainChart1'));
+
+			 // 指定图表的配置项和数据
+			 option = {
+					 
+					 title: {
+						 text: '交易额和获利',
+				  		    textStyle:{fontWeight:'normal'}
+						 },
+			  tooltip: {
+			    trigger: 'axis',
+			    axisPointer: { type: 'cross' }
+			  },
+			  legend: {},
+			  xAxis: [
+			    {
+			      type: 'category',
+			      axisTick: {
+			        alignWithLabel: true
+			      },
+			      data:timeArray,
+			    }
+			  ],
+			  yAxis: [
+			    {
+			      type: 'value',
+			      min: -1422.521,
+			      max: 21760.543,
+			      position: 'left',
+			      axisLabel: {
+			        formatter: '{value} U'
+			      }
+			    },
+			  ],
+			  series: [
+			    
+			    {
+			      name: '成交额',
+			      type: 'line',
+			      smooth: true,
+			      yAxisIndex: 0,
+			      data:tradeArray,
+			    },
+			    {
+				      name: '获利',
+				      type: 'line',
+				      yAxisIndex: 0,
+				      data: inComeArray,
+				    },
+			  ]
+			};
+
+		  // 使用刚指定的配置项和数据显示图表。
+		  mainChart1.setOption(option);
+
  
   }});
 
-  
-  // 基于准备好的dom，初始化echarts实例
-  var mainChart1 = echarts.init(document.getElementById('mainChart1'));
-
-	 // 指定图表的配置项和数据
-	 option = {
-			 
-			 title: {
-				 text: '交易额和获利',
-		  		    textStyle:{fontWeight:'normal'}
-				 },
-	  tooltip: {
-	    trigger: 'axis',
-	    axisPointer: { type: 'cross' }
-	  },
-	  legend: {},
-	  xAxis: [
-	    {
-	      type: 'category',
-	      axisTick: {
-	        alignWithLabel: true
-	      },
-	      data:timeArray,
-	    }
-	  ],
-	  yAxis: [
-	    {
-	      type: 'value',
-	      min: -1422.521,
-	      max: 21760.543,
-	      position: 'left',
-	      axisLabel: {
-	        formatter: '{value} U'
-	      }
-	    },
-	  ],
-	  series: [
-	    
-	    {
-	      name: '成交额',
-	      type: 'line',
-	      smooth: true,
-	      yAxisIndex: 0,
-	      data:tradeArray,
-	    },
-	    {
-		      name: '获利',
-		      type: 'line',
-		      yAxisIndex: 0,
-		      data: inComeArray,
-		    },
-	  ]
-	};
-
-  // 使用刚指定的配置项和数据显示图表。
-  mainChart1.setOption(option);
+ 
 
 
 		 
