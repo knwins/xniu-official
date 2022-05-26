@@ -326,18 +326,17 @@
       var mainChart4 = echarts.init(document.getElementById('mainChart4'));
       var symbolOval2=new Array();
       var sum=0;
+      
 
-
-      			//数据处理
+      //数据处理
 			for(let i = 0;i < result.analyseICoinOvals.length;i++){
 				var oval = new Object();
 				oval.name=result.analyseICoinOvals[i].name;
 				oval.value=result.analyseICoinOvals[i].percent;
 				sum=result.analyseICoinOvals[i].sumIncome;
-				symbolOval.push(oval); 
+				symbolOval2.push(oval); 
 			}
 
-			
       option = {
     		  title: {
     		    text: '实时持仓',
