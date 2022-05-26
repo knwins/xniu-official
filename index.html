@@ -286,21 +286,22 @@
 		var symbolOval=new Array();
 		var inCoinSum=0;
  
-		  //数据处理
-		for(let i = 0;i < result.analyseICoinOvals.length;i++){
-				var oval = new Object();
-				oval.name=result.analyseICoinOvals[i].name;
-				oval.value=result.analyseICoinOvals[i].percent;
-				inCoinSum=result.analyseICoinOvals[i].sumIncome;
-				symbolOval.push(oval); 
-		}
- 	 //  result.analyseICoinOvals.forEach((item,index)=>{
-			// var oval = new Object();
-			// oval.name=${item.name};
-			// oval.value=${item.percent};
-			// inCoinSum=${item.sumIncome};
-			// symbolOval.push(oval); 
- 		// });
+			// //数据处理
+			// for(let i = 0;i < result.analyseICoinOvals.length;i++){
+			// 	var oval = new Object();
+			// 	oval.name=result.analyseICoinOvals[i].name;
+			// 	oval.value=result.analyseICoinOvals[i].percent;
+			// 	inCoinSum=result.analyseICoinOvals[i].sumIncome;
+			// 	symbolOval.push(oval); 
+			// }
+
+	result.analyseICoinOvals.forEach((item,index)=>{
+		var oval = new Object();
+		oval.name=item[index].name;
+		oval.value=item[index].percent;
+		inCoinSum=item[index].sumIncome;
+		symbolOval.push(oval); 
+	});
 
 
     // 基于准备好的dom，初始化echarts实例
