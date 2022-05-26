@@ -297,9 +297,9 @@
 
 	result.analyseICoinOvals.forEach((item,index)=>{
 		var oval = new Object();
-		oval.name=item[index].name;
-		oval.value=item[index].percent;
-		inCoinSum=item[index].sumIncome;
+		oval.name=${item[index].name};
+		oval.value=${item[index].percent};
+		inCoinSum=${item[index].sumIncome};
 		symbolOval.push(oval); 
 	});
 
