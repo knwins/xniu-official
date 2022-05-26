@@ -286,16 +286,10 @@
 		var symbolOvalArray=result.analyseOvals;
 		var inCoinSum=0;
  
-		//   //数据处理
-		// var arr = result.analyseOvals;
-		// arr.forEach((item,index)=>{
-		//  //console.log(`下标${index}的数为${item}`)
-		//  var oval = new Object();
-		//    oval.name="${item.name}";
-		//    oval.value=${item.percent};
-		//    inCoinSum=${udj:formatPoit(item.sumIncome,3)};
-		//    symbolOvalArray.push(oval);
-		// });
+		  //数据处理
+ 		symbolOvalArray.forEach((item,index)=>{
+  		   inCoinSum=${item.sumIncome};
+ 		});
 
 
     // 基于准备好的dom，初始化echarts实例
