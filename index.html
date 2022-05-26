@@ -314,131 +314,13 @@
     mainChart3.setOption(option);
 
 
- 
-  }});
-
- 
 
 
-		 
-	
-		 
     //------------------------Main4-----------------------------
       // 基于准备好的dom，初始化echarts实例
       var mainChart4 = echarts.init(document.getElementById('mainChart4'));
-      var symbolOval2=new Array();
+      var symbolOval2=result.analyseICoinOvals;
       var sum=0;
-      
-      var oval = new Object();
-      oval.name="ETH(3993.913)";
-      oval.value=15.320;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="APE(3419.815)";
-      oval.value=13.120;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="BCH(3200)";
-      oval.value=12.270;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="DOGE(2739)";
-      oval.value=10.510;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="SHIB(1743)";
-      oval.value=6.690;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="SOL(1660)";
-      oval.value=6.370;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="BTC(1585.1)";
-      oval.value=6.080;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="DOT(1485)";
-      oval.value=5.700;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="BNB(1214.289)";
-      oval.value=4.660;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="EOS(830)";
-      oval.value=3.180;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="AVAX(830)";
-      oval.value=3.180;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="GAL(830)";
-      oval.value=3.180;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="ENS(830)";
-      oval.value=3.180;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="ETC(580)";
-      oval.value=2.220;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="FTT(415)";
-      oval.value=1.590;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="LTC(400)";
-      oval.value=1.530;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="XRP(249)";
-      oval.value=0.960;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-      var oval = new Object();
-      oval.name="UNI(66.4)";
-      oval.value=0.250;
-      sum=26070.515;
-      symbolOval2.push(oval);
-  	  
-  	  
-  	  
       option = {
     		  title: {
     		    text: '实时持仓',
@@ -461,7 +343,8 @@
 
       // 使用刚指定的配置项和数据显示图表。
       mainChart4.setOption(option);
-    </script>
+  }});
+ </script>
 	<!-- 选项 1：jQuery 和 Bootstrap 集成包（集成了 Popper） -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
