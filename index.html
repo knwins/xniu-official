@@ -202,7 +202,7 @@
 	<script type="text/javascript">
 	
 	
-	//------------------------Main1-----------------------------
+	
 	//收益
 	$.ajax({url:"https://api.fastbull.io/api/web/home",success:function(result){
      //加载累计获利数据
@@ -211,8 +211,7 @@
      //持仓金额
      $("#holdAmountSum").html(result.holdAmountSum);
 
-
-		//交易额成获利曲线图数据
+		//----------------------交易额成获利曲线图数据 Main1---------------------------
 		var inComeArray=result.analyseChartDataOne.datas;
 
 		//交易
@@ -221,9 +220,6 @@
 		//时间
 		var timeArray=result.analyseChartDataOne.times;
 
-
-
-		 
 		  // 基于准备好的dom，初始化echarts实例
 		  var mainChart1 = echarts.init(document.getElementById('mainChart1'));
 
@@ -280,145 +276,20 @@
 		  // 使用刚指定的配置项和数据显示图表。
 		  mainChart1.setOption(option);
 
- 
-  }});
-
- 
+		  //----------------------交易额成获利曲线图数据 Main1 end---------------------------
 
 
-		 
-	//------------------------Main3-----------------------------
+
+
+
+		//------------------------Main3-----------------------------
+		var symbolOval=result.analyseOvals;
+		var inCoinSum=0;
+
+
     // 基于准备好的dom，初始化echarts实例
     var mainChart3 = echarts.init(document.getElementById('mainChart3'));
-    var symbolOval=new Array();
-    var inCoinSum=0;
-    
-    var oval = new Object();
-    oval.name="LUNA(-1157.83)";
-    oval.value=27.510;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="AVAX(-750.07)";
-    oval.value=17.820;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="DOGE(-438.84)";
-    oval.value=10.430;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="APE(281.2)";
-    oval.value=6.680;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="EOS(-188.81)";
-    oval.value=4.490;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="ENS(148.92)";
-    oval.value=3.540;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="GAL(144.1)";
-    oval.value=3.420;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="BCH(142.15)";
-    oval.value=3.380;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="ATOM(-141.32)";
-    oval.value=3.360;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="TRX(140.1)";
-    oval.value=3.330;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="SHIB(-134.16)";
-    oval.value=3.190;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="LTC(-121.34)";
-    oval.value=2.880;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="FTT(113.76)";
-    oval.value=2.700;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="ETH(-89.64)";
-    oval.value=2.130;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="ETC(-60.4)";
-    oval.value=1.430;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="BNB(46.13)";
-    oval.value=1.100;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="SOL(34.27)";
-    oval.value=0.810;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="XRP(-27.94)";
-    oval.value=0.660;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="DOT(25.44)";
-    oval.value=0.600;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="UNI(12.78)";
-    oval.value=0.300;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
-    var oval = new Object();
-    oval.name="BTC(10.24)";
-    oval.value=0.240;
-    inCoinSum=4209.345;
-    symbolOval.push(oval);
-	  
+ 
     option = {
   		  title: {
   		    text: '币种盈利比例',
@@ -441,6 +312,16 @@
 
     // 使用刚指定的配置项和数据显示图表。
     mainChart3.setOption(option);
+
+
+ 
+  }});
+
+ 
+
+
+		 
+	
 		 
     //------------------------Main4-----------------------------
       // 基于准备好的dom，初始化echarts实例
