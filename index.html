@@ -284,20 +284,14 @@
 
 		//------------------------Main3-----------------------------
 		var symbolOvalArray=result.analyseOvals;
-		var inCoinSum=0;
+		var inCoinSum=100000;
  
-		  //数据处理
- 		symbolOvalArray.forEach((item,index)=>{
-  		   inCoinSum=${item.sumIncome};
- 		});
-
-
     // 基于准备好的dom，初始化echarts实例
     var mainChart3 = echarts.init(document.getElementById('mainChart3'));
     option = {
   		  title: {
   		    text: '币种盈利比例',
-  		  subtext:'累计：'+inCoinSum+'U',
+  		    subtext:'累计：'+inCoinSum+'U',
   		    left: 'center',
   		    top: 'center',
   		    textStyle:{fontWeight:'normal'}
