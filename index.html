@@ -71,7 +71,7 @@
 					</div>
 					<div class="ant-card feature-item ant-card-bordered">
 						<div class="ant-card-body">
-							<p class="title">-2739.322U</p>
+							<p class="title" id="sumIncome">-2739.322U</p>
 							<p class="subtitle">累计获利</p>
 						</div>
 					</div>
@@ -199,12 +199,17 @@
 	 
 
 
-<script type="text/javascript">
-$.ajax({url:"https://api.fastbull.io/api/web/home",success:function(result){
-     alert(result.sumIncome);
-}});
+	<script type="text/javascript">
+	
+	
 	//------------------------Main1-----------------------------
 	//收益
+	$.ajax({url:"https://api.fastbull.io/api/web/home",success:function(result){
+     //加载累计获利数据
+     $("#sumIncome").html(result.sumIncome);
+  }});
+
+
 	var inComeArray=new Array();
 	
 	inComeArray.push(-0.343);
