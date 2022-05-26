@@ -1,0 +1,15 @@
+﻿/*global css*/
+*{font-family:Arial, Helvetica, sans-serif; -webkit-text-size-adjust:none; }
+td,th,div,input,select,textarea,li,ol,dt,dd,h1,h2,h3,h4,h5,h6{font-size:12px; color:#333;}
+font,span{}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote{padding:0; margin:0;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+li{list-style-type:none;}
+img{border:none;}
+.line{border-bottom:1px dashed #ccc; height:1px; overflow:hidden;}
+.border{border:1px solid #ccc;}
+.wrap { width: 1008px;margin: 0 auto;}
+h1{font-size: 20px;}
+a{ font-size: 12px;color: #666;}
+
+ 
