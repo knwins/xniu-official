@@ -199,9 +199,10 @@
 	 
 
 
-	<script type="text/javascript">
-	
-	
+<script type="text/javascript">
+$.ajax({url:"https://api.fastbull.io/api/web/home",success:function(result){
+     alert(result.sumIncome);
+}});
 	//------------------------Main1-----------------------------
 	//收益
 	var inComeArray=new Array();
