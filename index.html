@@ -65,7 +65,7 @@
 				<div class="feature-cards">
 					<div class="ant-card feature-item ant-card-bordered">
 						<div class="ant-card-body">
-							<p class="title">26070.515U</p>
+							<p class="title" id="holdAmountSum">26070.515U</p>
 							<p class="subtitle">量化资金</p>
 						</div>
 					</div>
@@ -77,7 +77,7 @@
 					</div>
 					<div class="ant-card feature-item ant-card-bordered">
 						<div class="ant-card-body">
-							<p class="title">15000+</p>
+							<p class="title" id="coinSum">150</p>
 							<p class="subtitle">量化币种数量</p>
 						</div>
 					</div>
@@ -207,258 +207,24 @@
 	$.ajax({url:"https://api.fastbull.io/api/web/home",success:function(result){
      //加载累计获利数据
      $("#sumIncome").html(result.sumIncome);
+
+     //持仓金额
+     $("#holdAmountSum").html(result.holdAmountSum);
+
+
+		//交易额成获利曲线图数据
+		var inComeArray=result.analyseChartDataOne.datas;
+
+		//交易
+		var tradeArray=result.analyseChartDataOne.lines;
+
+		//时间
+		var timeArray=result.analyseChartDataOne.times;
+
+ 
   }});
 
-
-	var inComeArray=new Array();
-	
-	inComeArray.push(-0.343);
-	
-	inComeArray.push(-4.300);
-	
-	inComeArray.push(-5.274);
-	
-	inComeArray.push(21.622);
-	
-	inComeArray.push(-10.523);
-	
-	inComeArray.push(2.102);
-	
-	inComeArray.push(0.423);
-	
-	inComeArray.push(3.445);
-	
-	inComeArray.push(0.359);
-	
-	inComeArray.push(-4.341);
-	
-	inComeArray.push(4.031);
-	
-	inComeArray.push(6.749);
-	
-	inComeArray.push(-14.925);
-	
-	inComeArray.push(6.749);
-	
-	inComeArray.push(-15.504);
-	
-	inComeArray.push(-259.060);
-	
-	inComeArray.push(-312.744);
-	
-	inComeArray.push(-259.060);
-	
-	inComeArray.push(-58.361);
-	
-	inComeArray.push(-361.501);
-	
-	inComeArray.push(-58.361);
-	
-	inComeArray.push(-952.833);
-	
-	inComeArray.push(616.778);
-	
-	inComeArray.push(-1185.434);
-	
-	inComeArray.push(-729.331);
-	
-	inComeArray.push(234.143);
-	
-	inComeArray.push(-729.331);
-	
-	inComeArray.push(369.059);
-	
-	inComeArray.push(66.327);
-	
-	inComeArray.push(369.059);
-	
-	inComeArray.push(99.737);
-	
-	inComeArray.push(-97.812);
-	
-	inComeArray.push(90.771);
-	
-	inComeArray.push(-97.812);
-	
-	inComeArray.push(78.013);
-	
-	inComeArray.push(140.486);
-	
-	inComeArray.push(33.876);
-	
-	inComeArray.push(140.486);
-	
-	inComeArray.push(3.834);
-	
-	inComeArray.push(129.482);
-	
-	//交易
-	var tradeArray=new Array();
-	
-	tradeArray.push(39.460);
-	
-	tradeArray.push(48.741);
-	
-	tradeArray.push(388.142);
-	
-	tradeArray.push(62.836);
-	
-	tradeArray.push(69.134);
-	
-	tradeArray.push(169.826);
-	
-	tradeArray.push(21.004);
-	
-	tradeArray.push(67.989);
-	
-	tradeArray.push(20.187);
-	
-	tradeArray.push(35.431);
-	
-	tradeArray.push(28.936);
-	
-	tradeArray.push(282.350);
-	
-	tradeArray.push(89.394);
-	
-	tradeArray.push(282.350);
-	
-	tradeArray.push(316.496);
-	
-	tradeArray.push(1613.940);
-	
-	tradeArray.push(1679.256);
-	
-	tradeArray.push(1613.940);
-	
-	tradeArray.push(11238.718);
-	
-	tradeArray.push(468.499);
-	
-	tradeArray.push(11238.718);
-	
-	tradeArray.push(18133.786);
-	
-	tradeArray.push(13413.773);
-	
-	tradeArray.push(14132.149);
-	
-	tradeArray.push(5613.669);
-	
-	tradeArray.push(4084.143);
-	
-	tradeArray.push(5613.669);
-	
-	tradeArray.push(7633.616);
-	
-	tradeArray.push(1029.141);
-	
-	tradeArray.push(7633.616);
-	
-	tradeArray.push(1472.567);
-	
-	tradeArray.push(7127.912);
-	
-	tradeArray.push(1848.771);
-	
-	tradeArray.push(7127.912);
-	
-	tradeArray.push(1461.244);
-	
-	tradeArray.push(3082.335);
-	
-	tradeArray.push(732.676);
-	
-	tradeArray.push(3082.335);
-	
-	tradeArray.push(115.727);
-	
-	tradeArray.push(2121.482);
-		
-	//时间
-	var timeArray=new Array();
-	
-	timeArray.push("2022-04-14");
-	
-	timeArray.push("2022-04-18");
-	
-	timeArray.push("2022-04-21");
-	
-	timeArray.push("2022-04-23");
-	
-	timeArray.push("2022-04-24");
-	
-	timeArray.push("2022-04-26");
-	
-	timeArray.push("2022-04-27");
-	
-	timeArray.push("2022-04-30");
-	
-	timeArray.push("2022-04-30");
-	
-	timeArray.push("2022-05-01");
-	
-	timeArray.push("2022-05-03");
-	
-	timeArray.push("2022-05-04");
-	
-	timeArray.push("2022-05-06");
-	
-	timeArray.push("2022-05-06");
-	
-	timeArray.push("2022-05-07");
-	
-	timeArray.push("2022-05-08");
-	
-	timeArray.push("2022-05-09");
-	
-	timeArray.push("2022-05-09");
-	
-	timeArray.push("2022-05-10");
-	
-	timeArray.push("2022-05-11");
-	
-	timeArray.push("2022-05-11");
-	
-	timeArray.push("2022-05-12");
-	
-	timeArray.push("2022-05-13");
-	
-	timeArray.push("2022-05-13");
-	
-	timeArray.push("2022-05-14");
-	
-	timeArray.push("2022-05-15");
-	
-	timeArray.push("2022-05-15");
-	
-	timeArray.push("2022-05-16");
-	
-	timeArray.push("2022-05-17");
-	
-	timeArray.push("2022-05-17");
-	
-	timeArray.push("2022-05-18");
-	
-	timeArray.push("2022-05-19");
-	
-	timeArray.push("2022-05-20");
-	
-	timeArray.push("2022-05-20");
-	
-	timeArray.push("2022-05-21");
-	
-	timeArray.push("2022-05-22");
-	
-	timeArray.push("2022-05-23");
-	
-	timeArray.push("2022-05-23");
-	
-	timeArray.push("2022-05-25");
-	
-	timeArray.push("2022-05-25");
-	
-
+  
   // 基于准备好的dom，初始化echarts实例
   var mainChart1 = echarts.init(document.getElementById('mainChart1'));
 
@@ -514,6 +280,8 @@
 
   // 使用刚指定的配置项和数据显示图表。
   mainChart1.setOption(option);
+
+
 		 
 	//------------------------Main3-----------------------------
     // 基于准备好的dom，初始化echarts实例
