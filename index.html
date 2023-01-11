@@ -213,13 +213,13 @@
 	//收益
 	$.ajax({url:"https://front.fastbull.io/api/web/home",success:function(result){
      //加载累计获利数据
-     $("#sumIncome").html(result.sumIncome);
+     $("#sumIncome").html("$"+result.sumIncome);
 
      //持仓金额
-     $("#holdSum").html(result.holdSum);
+     $("#holdSum").html("$"+result.holdSum);
 		
 //昨天获利数据
-$("#yesterdayIncome").html(result.yesterdayIncome);
+$("#yesterdayIncome").html("$"+result.yesterdayIncome);
 
 
  　　//昨日收益
