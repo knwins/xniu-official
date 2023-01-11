@@ -71,14 +71,14 @@
 					</div>
 					<div class="ant-card feature-item ant-card-bordered">
 						<div class="ant-card-body">
-							<p class="title" id="sumIncome">-2739.322U</p>
-							<p class="subtitle">累计获利</p>
+							<p class="title" id="weekIncome">-2739.322U</p>
+							<p class="subtitle">最近7天收益</p>
 						</div>
 					</div>
 					<div class="ant-card feature-item ant-card-bordered">
 						<div class="ant-card-body">
-							<p class="title" id="weekIncome">150</p>
-							<p class="subtitle">最近7天收益</p>
+							<p class="title" id="yesterdayIncome">150</p>
+							<p class="subtitle">昨日收益</p>
 						</div>
 					</div>
 				</div>
@@ -217,6 +217,9 @@
 
      //持仓金额
      $("#holdSum").html(result.holdSum);
+		
+//昨天获利数据
+$("#yesterdayIncome").html(result.yesterdayIncome);
 
 
  　　//昨日收益
