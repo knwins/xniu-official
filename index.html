@@ -262,8 +262,8 @@ $("#yesterdayIncome").html("$"+result.yesterdayIncome);
 			  yAxis: [
 			    {
 			      type: 'value',
-			      min: -1422.521,
-			      max: 21760.543,
+			      min: ${result.analyseChartDataOne.min},
+			      max: ${result.analyseChartDataOne.max},
 			      position: 'left',
 			      axisLabel: {
 			        formatter: '{value} U'
