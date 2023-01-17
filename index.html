@@ -234,6 +234,12 @@ $("#yesterdayIncome").html("$"+result.yesterdayIncome);
 
 		//时间
 		var timeArray=result.analyseChartDataOne.times;
+		
+		//最大值
+		var max=result.analyseChartDataOne.max;
+		
+		//最小值
+		var min=result.analyseChartDataOne.min;
 
 		  // 基于准备好的dom，初始化echarts实例
 		  var mainChart1 = echarts.init(document.getElementById('mainChart1'));
@@ -262,8 +268,8 @@ $("#yesterdayIncome").html("$"+result.yesterdayIncome);
 			  yAxis: [
 			    {
 			      type: 'value',
-			      min: ${result.analyseChartDataOne.min},
-			      max: ${result.analyseChartDataOne.max},
+			      min: min,
+			      max: max,
 			      position: 'left',
 			      axisLabel: {
 			        formatter: '{value} U'
