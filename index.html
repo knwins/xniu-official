@@ -350,11 +350,11 @@ $("#yesterdayIncome").html("$"+result.yesterdayIncome);
       
 
       //数据处理
-			for(let i = 0;i < result.analyseICoinOvals.length;i++){
+			for(let i = 0;i < result.analyseSpotOvals.length;i++){
 				var oval = new Object();
-				oval.name=result.analyseICoinOvals[i].name;
-				oval.value=result.analyseICoinOvals[i].percent;
-				sum=result.analyseICoinOvals[i].sumIncome;
+				oval.name=result.analyseSpotOvals[i].name;
+				oval.value=result.analyseSpotOvals[i].percent;
+				sum=result.analyseSpotOvals[i].sumIncome;
 				symbolOval2.push(oval); 
 			}
 
