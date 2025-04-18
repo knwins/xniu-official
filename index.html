@@ -72,8 +72,8 @@
 					</div>
 					<div class="ant-card feature-item ant-card-bordered">
 						<div class="ant-card-body">
-							<p class="title" id="sumIncome">-2739.322U</p>
-							<p class="subtitle">累计收益</p>
+							<p class="title"><span id="sumIncome"></span> ｜ <span id="nowProfit"></span></p>
+							<p class="subtitle"><span>累计收益</span> | <span>实时盈亏</span></p>
 						</div>
 					</div>
 					<div class="ant-card feature-item ant-card-bordered">
@@ -208,6 +208,7 @@
 	$.ajax({url:"https://front.szqws.com/api/web/home",success:function(result){
      //加载累计获利数据
      $("#sumIncome").html("$"+result.sumIncome);
+     $("#nowProfit").html("$"+result.nowProfit);
 
      //持仓金额
      $("#holdSum").html("$"+result.holdSum);
