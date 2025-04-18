@@ -331,7 +331,7 @@ body {font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, sans
 .home-page .feature .feature-inner .subtitle {font-size: 18px;line-height: 28px;text-align: center;color: #FFFFFF;margin-top: 10px;}
 .home-page .feature .feature-inner .feature-cards {margin-top: 40px;display: flex;flex-flow: row wrap;align-items: center;justify-content: space-around;}
 .home-page .feature .feature-inner .feature-cards .feature-item {width: 375px;height: 180px;background: rgba(255, 255, 255, 0.1);border: 1px solid rgba(255, 255, 255, 0.2);box-sizing: border-box;border-radius: 12px;display: flex;align-items: center;justify-content: center;flex-flow: column nowrap;}
-.home-page .feature .feature-inner .feature-cards .feature-item .title {font-weight: 500;font-size: 32px;line-height: 38px;color: #FFFFFF;}
+.home-page .feature .feature-inner .feature-cards .feature-item .title {font-weight: 500;font-size: 26px;line-height: 38px;color: #FFFFFF;}
 .home-page .feature .feature-inner .feature-cards .feature-item .subtitle {font-size: 18px;line-height: 28px;color: rgba(255, 255, 255, 0.5);margin-top: 10px;}
 .home-page .product {display: flex;justify-content: center;margin: 0 auto;}
 .home-page .product .product-inner {width: 100%;max-width: 1168px;}
